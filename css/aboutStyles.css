@@ -1,0 +1,52 @@
+#abContainer {
+    position: absolute;
+    width: 30em;
+    bottom: 0px;
+    left: 5em;
+    margin-right: .5em;;
+    box-shadow: 5px 5px 10px rgb(52, 52, 52);
+    border-top-left-radius: 1em;  border-top-right-radius: 1em;
+    color: white;
+    font-weight: bold;
+    z-index: 7;
+}
+
+#abHeader {
+  width: calc(100% - 2.5em);
+  background-color: rgba(0, 0, 0, 0.75);
+  font-size: .75em;
+  cursor: pointer;
+  border-top-left-radius: 1.25em;  border-top-right-radius: 1.25em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  color: #aab7ec;
+}
+
+#abHeader p {
+  font-size: .75em;
+}
+
+#abHeader:hover {
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+}
+
+#abContent {
+  font-size: .75em;
+  width: calc(100% - 2.5em);
+  padding-top: 1em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-bottom: 2.25em;
+  background-color: rgba(0, 0, 0, .6);
+  max-height: 40em;
+  overflow-y: auto;
+}
+
+.aboutHeading {
+  border-bottom: 1px solid grey;
+}
+
+.it {
+  font-style: italic;
+}

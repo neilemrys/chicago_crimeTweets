@@ -1,0 +1,152 @@
+#overMap {
+    position: absolute;
+    top: 0em;
+    z-index: 100;
+    font-size: .8em;
+    color: white;
+    line-height: 3em;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#overMap * {
+  pointer-events: all;
+}
+
+#queryForm {
+  text-align: center;
+}
+
+#queryBox {
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  height: calc(100% - 2em);
+  background-color: #0a1521;
+  border-radius: 1em;
+  margin: .5em;
+  overflow-x: hidden;
+  align-items: center;
+  padding: .5em 0 0 0;
+}
+
+td.label {
+  line-height: 1.5;
+  text-align: center;
+}
+
+td.label div {
+
+}
+
+#infoBox {
+  position: relative;
+  float: right;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  top: 1em;
+  right: 0em;
+  font-size: .8em;
+  line-height: 1.5em;
+  background-color: #0a1521;
+  max-height: 60em;
+  width: 50em;
+  padding: 1em;
+}
+#tweetBox {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.tweet {
+  margin-bottom: .5em;
+  background-color: grey;
+}
+
+.userImage {
+  float: left;
+  padding-right: 1em;
+  height: 100%;
+}
+
+#crimes {
+  width: 90%;
+  text-align: center;
+}
+
+input {
+  border-radius: .25em;
+  border: none;
+  width: 75%;
+  line-height: 2em;
+  text-align: center;
+}
+
+input:hover {
+  background-color: #7b9574;
+}
+
+.tab {
+  display: block;
+  text-align: center;
+  background-color: gray;
+  line-height: 1.75em;
+  font-size: 1.25em;
+  font-weight: bold;
+  width: 90%;
+  border: 2px solid #0a1521;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: #7b9574;
+}
+
+#homicideContent {
+  display: block;
+  line-height: 1.5em;
+  padding: 1em;
+}
+.content {
+  border: 2px solid #0a1521;
+  border-top: none;
+}
+
+.tdata, .field {
+  padding-left: 1em;
+}
+
+td.field {
+  text-align: right;
+}
+
+td.tdata {
+  text-align: left;
+}
+
+#lastUp {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+#legend {
+  color: white;
+  border: 1px solid gray;
+  background-color: #0a1521;
+}
+
+#legContent span {
+  padding: 0 .5em .5em .5em;
+  font-size: .85em;
+  width: 50%;
+}
+
+#tweetBox {
+  padding-top: .5em;
+}

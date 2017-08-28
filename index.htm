@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chicago Homicides</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/datePick.css">
+  <link rel="stylesheet" href="css/mapStyles.css">
+  <link rel="stylesheet" href="css/forms.css">
+
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/moment.js"></script>
+  <script type="text/javascript" src="js/moment_timezone.js"></script>
+  <script type="text/javascript" src="js/crimeSelect.js"></script>
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyAQjK2G6m9sY1b0NHU7ogRhWs5zauzcWqc">
+  </script>
+  <script type="text/javascript" src="js/gmapLayer.js"></script>
+
+</head>
+<body onload="initMap()">
+
+  <!--MAP CONTAINER-->
+  <div id="map"></div>
+  <!--MAP CONTAINER END-->
+
+<div id="overMap">
+  <!--QUERY FORM-->
+
+<div id="queryBox">
+  <div id="querytitle" class="tab">Map Chicago Crime</div>
+  <form id="queryForm" class="content">
+    <table>
+      <tr><td colspan="2">
+      <select id="crimes">
+        <option>Select crime type</option>
+      </select>
+    </td></tr>
+    <tr><td>
+      <input type="text" class="entry" placeholder="start date" id="fromDate"size="9">
+    </td><td>
+      <input type="text" class="entry" placeholder="end date" id="toDate" size="9">
+    </td></tr>
+    <tr><td>
+      <input id="clearHomicides" type="button" class="entry" value="Clear Map">
+    </td><td>
+      <input id="getHomicides" type="button" class="entry" value="Map Crime">
+    </td></tr>
+    <tr><td colspan="2">
+      Set criteria for spatiotemporal co-location of social media posts:
+    </td></tr>
+    <tr>
+        <td class="label"><div>Minutes:</div></td>
+        <td class="label"><div>Meters:</div></td>
+    </tr>
+   </tr><td>
+      <input type="number" class="entry" value=10 id="timeRadius" size="9">
+   </td><td>
+      <input type="number" class="entry" value=150 id="distRadius" size="9">
+    </td></tr>
+  </table>
+    <!--QUERY FORM END-->
+    <!--INFO BOX-->
+    </form>
+
+      <div id="legendTitle" class="tab">Legend</div>
+      <div id= "legContent">
+        <svg version="1.1" baseProfile="full" width="2em" height="2em" xmlns="http://www.w3.org/2000/svg"> <circle cx="15" cy="18" r=".6em" stroke="black" stroke-width="3px" fill="red" /></svg><span id="dates">Incidents</span>
+        <svg version="1.1" baseProfile="full" width="2em" height="2em" xmlns="http://www.w3.org/2000/svg"> <circle cx="15" cy="20" r=".4em" stroke="black" stroke-width="3px" fill="blue" /></svg><span id="coLoco">Tweets</span>
+      </div>
+    <div id="homicideInfo" class="tab">Crime Incident Information</div></td></tr>
+      <div id="homicideContent" class="content">
+        <p>Enter criteria into the query form above. Click "Map Crime" to populate the map with homicide locations.</p><br /><p>Click on a homocide location and detailed information will be displayed here.</p><br /><p>Any co-located Twitter post will appear on the map and their information will be displayed below.</p>
+      </div>
+      <div id="tweetInfo" class="tab">Twitter Posts</div>
+      <div id="tweetBox"></div>
+    </div>
+    <!--INFO BOX END-->
+</div>
+
+</div>
+<!--SCRIPTS-->
+<script>list();</script>
+<script type="text/javascript" src="js/datePickers.js"></script>
+<script type="text/javascript" src="js/chiHomicides.js"></script>
+<script type="text/javascript" src="js/parseTwitter.js"></script>
+<script type="text/javascript" src="js/collapse.js"></script>
+</body>
+</html>
